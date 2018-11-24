@@ -1,4 +1,4 @@
-package Sort.BubbleSort.Java;
+package com.mxwild.Sort.BubbleSort.Java;
 
 import java.util.Arrays;
 
