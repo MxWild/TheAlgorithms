@@ -2,13 +2,6 @@ package com.mxwild.sort.selectionsort.java;
 
 public class SelectionSort {
 
-//  public static void main(String[] args) {
-//    SortUtils.print(arr);
-//    selectionSort(arr);
-//    System.out.println("Sorted array is:");
-//    SortUtils.print(arr);
-//  }
-
   public static void selectionSort(int[] arr) {
     int minIndex;
 
@@ -25,7 +18,6 @@ public class SelectionSort {
         arr[i] = arr[minIndex];
         arr[minIndex] = tmp;
       }
-
     }
   }
 

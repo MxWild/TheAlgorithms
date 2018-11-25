@@ -12,6 +12,6 @@ arr = [12, 43, 27, -10, 49, 15, 15]
 
 bubble_sort(arr)
 
-print("Bubble com.mxwild.Sort array is:")
+print("Bubble Sort array is:")
 for i in range(len(arr)):
     print("%d" % arr[i])
