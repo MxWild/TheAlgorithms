@@ -1,6 +1,6 @@
 package com.mxwild.Sort.BubbleSort.Java;
 
-import java.util.Arrays;
+import com.mxwild.Sort.Utils.SortUtils;
 
 public class BubbleSort {
 
@@ -10,7 +10,7 @@ public class BubbleSort {
   public static void main(String[] args) {
     bubbleSort(arr);
     System.out.println("Sorted array is: ");
-    printArray(arr);
+    SortUtils.print(arr);
   }
 
   private static void bubbleSort(int[] arr) {
@@ -26,9 +26,4 @@ public class BubbleSort {
 
     }
   }
-
-  private static void printArray(int[] arr) {
-    System.out.println(Arrays.toString(arr));
-  }
-
 }
