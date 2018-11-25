@@ -1,4 +1,4 @@
-package com.mxwild.Sort.Utils;
+package com.mxwild.sort.utils;
 
 import java.util.Arrays;
 

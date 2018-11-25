@@ -1,10 +1,10 @@
-package com.mxwild.Sort.BubbleSort.Java;
+package com.mxwild.sort.bubblesort.java;
 
-import com.mxwild.Sort.Utils.SortUtils;
+import com.mxwild.sort.utils.SortUtils;
 
 public class BubbleSort {
 
-  private static int arr[] = {12, 54, 98, 45, 32, 85, 9, 122, 2};
+  private static int[] arr = {12, 54, 98, 45, 32, 85, 9, 122, 2};
 
 
   public static void main(String[] args) {
