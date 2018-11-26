@@ -2,6 +2,10 @@ package com.mxwild.sort.insertionsort.java;
 
 public class InsertionSort {
 
+  private InsertionSort() {
+    throw new IllegalStateException("InsertionSort class");
+  }
+
   public static void insertionSort(int[] arr) {
     for (int i = 0; i < arr.length; i++) {
       int key = arr[i];

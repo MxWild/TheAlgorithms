@@ -2,6 +2,10 @@ package com.mxwild.sort.selectionsort.java;
 
 public class SelectionSort {
 
+  private SelectionSort() {
+    throw new IllegalStateException("SelectionSort class");
+  }
+
   public static void selectionSort(int[] arr) {
     int minIndex;
 
