@@ -3,7 +3,7 @@ package com.mxwild.sort.insertionsort.java;
 public class InsertionSort {
 
   private InsertionSort() {
-    throw new IllegalStateException("InsertionSort class");
+    throw new UnsupportedOperationException("InsertionSort class");
   }
 
   public static void insertionSort(int[] arr) {

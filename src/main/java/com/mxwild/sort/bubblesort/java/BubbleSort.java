@@ -3,7 +3,7 @@ package com.mxwild.sort.bubblesort.java;
 public class BubbleSort {
 
   private BubbleSort() {
-    throw new IllegalStateException("BubbleSort class");
+    throw new UnsupportedOperationException("BubbleSort class");
   }
 
   public static void bubbleSort(int[] arr) {

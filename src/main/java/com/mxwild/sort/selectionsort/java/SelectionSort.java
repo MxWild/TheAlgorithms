@@ -3,7 +3,7 @@ package com.mxwild.sort.selectionsort.java;
 public class SelectionSort {
 
   private SelectionSort() {
-    throw new IllegalStateException("SelectionSort class");
+    throw new UnsupportedOperationException("SelectionSort class");
   }
 
   public static void selectionSort(int[] arr) {

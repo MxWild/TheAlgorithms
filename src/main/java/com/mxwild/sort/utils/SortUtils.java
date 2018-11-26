@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class SortUtils {
 
   private SortUtils() {
-    throw new IllegalStateException("SortUtils class");
+    throw new UnsupportedOperationException("SortUtils class");
   }
 
   public static void print(String message, int[] array){
