@@ -1,12 +1,15 @@
 def selection_sort(array):
-    minIndex = array[0]
 
-    for i in range(array):
-        minIndex = array[i]
+    for i in range(len(array)-1, 0, -1):
+        positionOfMax = 0
 
-        for j in range(i + 1,len(array)):
-            if array[j] < array[minIndex]:
-                minIndex = j
+        for loc in range(1, i + 1):
+            if array[loc] > array[positionOfMax]:
+                positionOfMax = loc
+
+        temp = array[i]
+        array[i] = array[positionOfMax]
+        array[positionOfMax] = temp
 
 
 
