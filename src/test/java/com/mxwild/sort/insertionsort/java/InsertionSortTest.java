@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -13,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @DisplayName("Insertion Sort")
 public class InsertionSortTest {
 
-  private static int[] notSortArray = {12, 54, 98, 45, 32, 85, 9, 122, 2};
-  private static int[] sortedArray = {2, 9, 12, 32, 45, 54, 85, 98, 122};
+  private static final int lengthArray = 10;
+
 
   @Test
   public void constructor() {
@@ -32,7 +33,12 @@ public class InsertionSortTest {
 
   @Test
   public void insertionSort() {
+    int[] notSortArray = SortUtils.generateArray(lengthArray);
     SortUtils.print("Before sorted: ", notSortArray);
+
+    int[] sortedArray = notSortArray;
+    Arrays.sort(sortedArray);
+
     InsertionSort.insertionSort(notSortArray);
     assertArrayEquals(sortedArray, notSortArray);
     SortUtils.print("After sorted: ", notSortArray);
