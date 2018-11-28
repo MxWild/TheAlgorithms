@@ -1,5 +1,6 @@
-package com.mxwild.sort.selectionsort.java;
+package com.mxwild.sort.mergesort.java;
 
+import com.mxwild.sort.bubblesort.java.BubbleSort;
 import com.mxwild.sort.utils.SortUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,17 +12,16 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@DisplayName("Selection Sort")
-public class SelectionSortTest {
+@DisplayName("Merge Sort")
+public class MergeSortTest {
 
   private static final int lengthArray = 10;
-
 
   @Test
   public void constructor() {
 
     assertThrows(UnsupportedOperationException.class, () -> {
-      Constructor<SelectionSort> constructor = SelectionSort.class.getDeclaredConstructor();
+      Constructor<MergeSort> constructor = MergeSort.class.getDeclaredConstructor();
       constructor.setAccessible(true);
       try {
         constructor.newInstance();
@@ -32,14 +32,15 @@ public class SelectionSortTest {
   }
 
   @Test
-  public void selectionSortTest() {
+  public void mergeSortTest() {
     int[] notSortArray = SortUtils.generateArray(lengthArray);
     SortUtils.print("Before sorted: ", notSortArray);
 
     int[] sortedArray = notSortArray.clone();
     Arrays.sort(sortedArray);
 
-    SelectionSort.selectionSort(notSortArray);
+    MergeSort.mergeSort(notSortArray);
+
     assertArrayEquals(sortedArray, notSortArray);
     SortUtils.print("After sorted: ", notSortArray);
   }

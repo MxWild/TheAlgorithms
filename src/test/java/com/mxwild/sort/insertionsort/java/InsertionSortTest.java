@@ -36,7 +36,7 @@ public class InsertionSortTest {
     int[] notSortArray = SortUtils.generateArray(lengthArray);
     SortUtils.print("Before sorted: ", notSortArray);
 
-    int[] sortedArray = notSortArray;
+    int[] sortedArray = notSortArray.clone();
     Arrays.sort(sortedArray);
 
     InsertionSort.insertionSort(notSortArray);
