@@ -1,6 +1,5 @@
 package com.mxwild.sort.mergesort.java;
 
-import com.mxwild.sort.bubblesort.java.BubbleSort;
 import com.mxwild.sort.utils.SortUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -39,7 +38,7 @@ public class MergeSortTest {
     int[] sortedArray = notSortArray.clone();
     Arrays.sort(sortedArray);
 
-    MergeSort.mergeSort(notSortArray);
+    MergeSort.mergeSort(notSortArray, lengthArray);
 
     assertArrayEquals(sortedArray, notSortArray);
     SortUtils.print("After sorted: ", notSortArray);
