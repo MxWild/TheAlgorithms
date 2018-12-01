@@ -8,6 +8,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
+import static com.mxwild.sort.utils.SortUtils.MESSAGE_AFTER;
+import static com.mxwild.sort.utils.SortUtils.MESSAGE_BEFORE;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -34,13 +36,13 @@ public class InsertionSortTest {
   @Test
   public void insertionSort() {
     int[] notSortArray = SortUtils.generateArray(lengthArray);
-    SortUtils.print("Before sorted: ", notSortArray);
+    SortUtils.print(MESSAGE_BEFORE, notSortArray);
 
     int[] sortedArray = notSortArray.clone();
     Arrays.sort(sortedArray);
 
     InsertionSort.insertionSort(notSortArray);
     assertArrayEquals(sortedArray, notSortArray);
-    SortUtils.print("After sorted: ", notSortArray);
+    SortUtils.print(MESSAGE_AFTER, notSortArray);
   }
 }

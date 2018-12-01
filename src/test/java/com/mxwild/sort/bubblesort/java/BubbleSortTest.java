@@ -8,6 +8,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
+import static com.mxwild.sort.utils.SortUtils.MESSAGE_AFTER;
+import static com.mxwild.sort.utils.SortUtils.MESSAGE_BEFORE;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -34,7 +36,7 @@ public class BubbleSortTest {
   @Test
   public void bubbleSortTest() {
     int[] notSortArray = SortUtils.generateArray(lengthArray);
-    SortUtils.print("Before sorted: ", notSortArray);
+    SortUtils.print(MESSAGE_BEFORE, notSortArray);
 
     int[] sortedArray = notSortArray.clone();
     Arrays.sort(sortedArray);
@@ -42,7 +44,7 @@ public class BubbleSortTest {
     BubbleSort.bubbleSort(notSortArray);
 
     assertArrayEquals(sortedArray, notSortArray);
-    SortUtils.print("After sorted: ", notSortArray);
+    SortUtils.print(MESSAGE_AFTER, notSortArray);
   }
 
 }

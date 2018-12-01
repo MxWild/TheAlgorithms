@@ -8,6 +8,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
+import static com.mxwild.sort.utils.SortUtils.MESSAGE_AFTER;
+import static com.mxwild.sort.utils.SortUtils.MESSAGE_BEFORE;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -34,14 +36,14 @@ public class SelectionSortTest {
   @Test
   public void selectionSortTest() {
     int[] notSortArray = SortUtils.generateArray(lengthArray);
-    SortUtils.print("Before sorted: ", notSortArray);
+    SortUtils.print(MESSAGE_BEFORE, notSortArray);
 
     int[] sortedArray = notSortArray.clone();
     Arrays.sort(sortedArray);
 
     SelectionSort.selectionSort(notSortArray);
     assertArrayEquals(sortedArray, notSortArray);
-    SortUtils.print("After sorted: ", notSortArray);
+    SortUtils.print(MESSAGE_AFTER, notSortArray);
   }
 
 }
