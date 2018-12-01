@@ -3,7 +3,7 @@ package com.mxwild.sort.mergesort.java;
 public class MergeSort {
 
   private MergeSort() {
-    throw new UnsupportedOperationException("MergeSort class");
+    throw new UnsupportedOperationException("QuickSort class");
   }
 
   public static void mergeSort(int[] arr, int lengthArray) {
