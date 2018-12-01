@@ -12,6 +12,8 @@ public class SortUtils {
   public static final String MESSAGE_BEFORE = "Before sorted: {}";
   public static final String MESSAGE_AFTER = "After sorted: {}";
 
+  public static final int LENGTH_ARRAY = 10;
+
   private SortUtils() {
     throw new UnsupportedOperationException("SortUtils class");
   }

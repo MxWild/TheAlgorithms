@@ -6,7 +6,7 @@ public class QuickSort {
     throw new UnsupportedOperationException("QuickSort class");
   }
 
-  public void quickSort(int[] arr, int begin, int end) {
+  public static void quickSort(int[] arr, int begin, int end) {
     if (begin < end) {
       int partitionIndex = partition(arr, begin, end);
 
@@ -15,7 +15,7 @@ public class QuickSort {
     }
   }
 
-  private int partition(int[] arr, int begin, int end) {
+  private static int partition(int[] arr, int begin, int end) {
     int pivot = arr[end];
     int i = (begin - 1);
 

@@ -1,4 +1,4 @@
-package com.mxwild.sort.mergesort.java;
+package com.mxwild.sort.quicksort.java;
 
 import com.mxwild.sort.utils.SortUtils;
 import org.junit.jupiter.api.DisplayName;
@@ -12,14 +12,14 @@ import static com.mxwild.sort.utils.SortUtils.*;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@DisplayName("Merge Sort")
-public class MergeSortTest {
+@DisplayName("Quick Sort")
+public class QuickSortTest {
 
   @Test
   public void constructor() {
 
     assertThrows(UnsupportedOperationException.class, () -> {
-      Constructor<MergeSort> constructor = MergeSort.class.getDeclaredConstructor();
+      Constructor<QuickSort> constructor = QuickSort.class.getDeclaredConstructor();
       constructor.setAccessible(true);
       try {
         constructor.newInstance();
@@ -30,17 +30,16 @@ public class MergeSortTest {
   }
 
   @Test
-  public void mergeSortTest() {
+  public void quickSort() {
     int[] notSortArray = SortUtils.generateArray(LENGTH_ARRAY);
     SortUtils.print(MESSAGE_BEFORE, notSortArray);
 
     int[] sortedArray = notSortArray.clone();
     Arrays.sort(sortedArray);
 
-    MergeSort.mergeSort(notSortArray, LENGTH_ARRAY);
+    QuickSort.quickSort(notSortArray, 0, LENGTH_ARRAY - 1);
 
     assertArrayEquals(sortedArray, notSortArray);
     SortUtils.print(MESSAGE_AFTER, notSortArray);
   }
-
 }
